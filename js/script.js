@@ -74,10 +74,10 @@ const users_data = (data) => {
 
 
 $(document).on("scroll", () => {
-    if($(document).scrollTop() > 500){
+    if($(document).scrollTop() > 300){
         $('.navbar-lado__derecho').css('background-color','white');
     }
-    if($(document).scrollTop() < 500){
+    if($(document).scrollTop() < 300){
         $('.navbar-lado__derecho').css('background-color','var(--color-amarillo)');
     }
 });
