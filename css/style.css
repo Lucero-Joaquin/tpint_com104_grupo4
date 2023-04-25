@@ -38,6 +38,7 @@
     --color-3-paleta: #EDED07;
     --color-4-paleta: #841FED;
     --color-5-paleta: #ED5713;
+    --color-6-paleta: #004AAD;
 }
 
 
@@ -144,6 +145,10 @@
     transform: translateY(0);
 }
 
+.container-modal{
+    background-color: var(--color-3-paleta);
+    background-image: var(--bs-gradient);
+}
 
 
 @media (min-width: 768px) {
@@ -493,6 +498,54 @@
 /*======= FORM PROCESS =======*/
 
 
-/*========================
-        FOOTER
-========================*/
+/*=======FOOTER=======*/
+.footer{
+    background: linear-gradient(to right, var(--color-3-paleta), white);
+
+}
+
+.container-footer {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.links{
+    display: flex;
+    color: var(--color-6-paleta);
+}
+
+.links a{
+    padding: 20px;
+}
+
+.link{
+    transition: transform .2s; 
+}
+
+.link:hover{
+    transform: scale(1.2); 
+}
+
+.redes{
+    display: flex;
+}
+
+.redes a{
+    padding: 10px;
+    transition: transform .2s; 
+}
+
+.redes a:hover{
+    transform: scale(1.2);
+}
+
+.copy-2023{
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+/*=======FOOTER=======*/

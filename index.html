@@ -23,7 +23,7 @@
                 <div class="navbar-lado__derecho"></div>
                 <div class="navbar-list ">
                     <div class="sub__navbar-list col-11">
-                        <a href="/" class="navbar__logo"><img src="images/logo2.png" alt=""></a>
+                        <a href="/" class="navbar__logo"><img src="images/FutbolData2.png" alt="logo-empresa"></a>
                         <ul class="navbar__titles d-none d-md-flex">
                             <li><a href="#organizacion">organizacion</a></li>
                             <li><a href="#personal">personal</a></li>
@@ -43,10 +43,42 @@
                             </div>
                         </ul>
                         
-                        <button class="btn bg-black navbar__btn-login">LOGIN</button>
+                        <button class="btn bg-black navbar__btn-login" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">LOGIN</button>    
                     </div>
                 </div>
             </nav>
+            <!-- Modal -->
+            <div>
+                <div class="modal fade" id="exampleModal" tabindex="-2" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content text-black">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <label for="recipient-name" class="col-form-label"><img src="./images/icon-usuario.png" alt="icon-usuario" width="30" height="30"></label>
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput" placeholder="Usuario">
+                                        <label for="floatingInput">Usuario</label>
+                                    </div>
+                                    <label for="message-text" class="col-form-label"><img src="./images/icon-contraseña.png" alt="icon-contraseña" width="30" height="30"></label>
+                                    <div class="form-floating">
+                                        <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+                                        <label for="floatingPassword">Contraseña</label>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Cierra Modal-->
         </header>
         <main class="main">
             <section class="main-hero">
@@ -90,7 +122,22 @@
             </section>
             <section class="main-form_process"></section>
         </main>
-        <footer class="footer"></footer>
+
+        <footer class="footer">
+            <div class="container-footer">
+                <div class="links">
+                    <a href="#" class="nav-link link">Términos y Condiciones</a>
+                    <a href="#" class="nav-link link">Contáctanos</a>
+                </div>
+                <div class="redes">
+                    <a href="#"><img src="images/icon-facebook.png" alt="icon-facebook" width="40" height="40"></a>
+                    <a href="#"><img src="images/icon-instagram.png" alt="icon-instagram" width="40" height="40"></a>
+                </div>
+            </div>
+            <div class="copy-2023">
+                <span>© 2023 Todos Los Derechos Reservados Trabajo Integrador</span>
+            </div>
+        </footer>
     </div>
 
     <!-- jQuery -->
