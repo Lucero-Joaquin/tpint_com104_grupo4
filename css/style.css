@@ -33,12 +33,12 @@
     --color-amarillo: #ffff00;
     --bg-presentacion: #1FEDD6;
     --bg-api: white;
+    --bg-form_process: #1FEDD6;
 
     --color-2-paleta: #1FEDD6;
     --color-3-paleta: #EDED07;
     --color-4-paleta: #841FED;
     --color-5-paleta: #ED5713;
-    --color-6-paleta: #004AAD;
 }
 
 
@@ -48,6 +48,11 @@
     box-sizing: border-box;
     font-family: Roboto-Regular;
     font-size: 16px;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 
@@ -77,13 +82,17 @@
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     text-transform: capitalize;
 }
 
+.navbar__logo {
+    flex: 0 0 auto;
+    width: 50%;
+}
+
 .navbar__logo img{
-    width: 95%;
+    width: 100%;
 }
 
 .navbar-list {
@@ -121,7 +130,7 @@
     transition: all .2s ease-in-out;
 }
 .navbar__mobil a:hover{
-    color: rgba(0, 0, 0, 0.4);
+    color: rgba(0, 0, 0, 0.6);
     
 }
 
@@ -145,6 +154,16 @@
     transform: translateY(0);
 }
 
+.btn-enviar__modal {
+    background-color: var(--color-4-paleta);
+    color: white; 
+}
+.btn-enviar__modal:hover {
+    background-color: var(--color-4-paleta);
+    opacity: .9;
+    color: white; 
+}
+
 @media (min-width: 768px) {
     .navbar-lado__izquierdo {
         width: 100%;
@@ -158,6 +177,11 @@
         transition: background-color .3s ease-in-out;
     }
     
+    .navbar__logo {
+        flex: none;
+        width: auto;
+    }
+
     .navbar__logo img{
         width: 100%;
     }
@@ -201,12 +225,8 @@
         color: black;
         font-weight: 700;
     }
-    .navbar__titles li:hover{
-        transform: translateY(-2px);
-        transition: all .2s ease-in-out;
-    }
     .navbar__titles li:hover a{
-        color: rgba(0, 0, 0, 0.4);
+        color: rgba(0, 0, 0, 0.6);
         transition: all .2s ease-in-out;
     }
     
@@ -215,6 +235,13 @@
 @media screen and (max-width: 1023px) {
     .navbar__titles {
         gap: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+
+    .navbar__logo{
+        width: 25%;
     }
 }
 
@@ -408,9 +435,9 @@
     min-height: 300px;
     background-color: white;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 150px;
 }
-.api-title, #Fcontacto, #sumate {
+.api-title {
     font-family: Poppins-Bold;
     text-transform: uppercase;
     margin-bottom: 3rem;
@@ -419,7 +446,7 @@
     display: grid;
     place-items: center;
     text-align: center;
-    padding-bottom:150px;
+    padding-bottom:200px;
 }
 .users-api__list {
     display: flex;
@@ -489,36 +516,76 @@
 
 /*======= FORM CONTACT =======*/
 .main-form_contact {
-    margin-top: 5%;
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    background-color: black;
+    display: grid;
+    place-content: center;
 }
 .formContacto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    place-content: center;
+    margin: 150px 0 250px 0;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(154, 153, 155, 0.4);
 }
-.form-row {
-    width: 200vh;
+#Fcontacto{
+    font-family: Poppins-Bold;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    text-align: center;
+    background-color: white;
+    height: 100%;
+}
+#formulario {
+    display: grid;
+    place-content: center;
+    background-color: white;
+}
+.form__group {
+    display: grid;
+    gap: 1rem;
+}
+.custom-select {
+    min-height: 40px;
 }
 #Mostrar {
     margin-bottom: 0.5%;
 }
+
+.btn-form__contact {
+    background-color: var(--color-4-paleta);
+    color: white;
+    font-family: Roboto-Regular;
+}
+.btn-form__contact:hover {
+    background-color: var(--color-4-paleta);
+    opacity: .9;
+    color: white;
+}
+
+.form_contact-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    fill: var(--bg-form_process);
+}
+
+@media (min-width: 768px) {
+    .formContacto {
+        padding: 5rem !important;
+    }
+}
+
+
 /*======= FORM PROCESS =======*/
 .form-wizard-steps {
     margin-left: 18% !important;
 }
-:root {
-    --bg-main-default: #fff;
-}
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Roboto-Regular;
-    font-size: 16px;
-}
-
 
 .wizard-content-left {
   background-blend-mode: darken;
@@ -530,7 +597,7 @@
   padding: 30px;
 }
 .wizard-content-left h1 {
-  color: #ffffff;
+  color: white;
   font-size: 38px;
   font-weight: 600;
   padding: 12px 20px;
@@ -538,22 +605,29 @@
 }
 
 .form-wizard {
-  color: #888888;
+  color: black;
   padding: 30px;
 }
 .form-wizard .form-wizard-header {
   text-align: center;
 }
+#sumate {
+    font-family: Poppins-Bold;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    color: white;
+}
 .form-wizard .form-wizard-next-btn, .form-wizard .form-wizard-previous-btn, .form-wizard .form-wizard-submit {
-  background-color: #0d6efd;
-  color: #ffffff;
+  background-color: var(--color-4-paleta);
+  color: white;
   display: inline-block;
   padding: 10px;
   text-align: center;
   border-radius: 10%;
+  cursor: pointer;
 }
 .form-wizard .form-wizard-next-btn:hover, .form-wizard .form-wizard-next-btn:focus, .form-wizard .form-wizard-previous-btn:hover, .form-wizard .form-wizard-previous-btn:focus, .form-wizard .form-wizard-submit:hover, .form-wizard .form-wizard-submit:focus {
-  color: #ffffff;
+  color: white;
   opacity: 0.6;
   text-decoration: none;
 }
@@ -562,6 +636,7 @@ a {
 }
 .form-wizard .wizard-fieldset {
   display: none;
+  text-align: center;
 }
 .form-wizard .wizard-fieldset.show {
   display: block;
@@ -575,9 +650,6 @@ a {
   bottom: 0;
   height: 2px;
   width: 100%;
-}
-.form-wizard .form-wizard-previous-btn {
-  background-color: #0d6efd;
 }
 .form-wizard .form-control {
   font-weight: 300;
@@ -643,17 +715,17 @@ a {
 }
 .form-wizard .form-wizard-steps li.active span, .form-wizard .form-wizard-steps li.activated span {
   background-color: gray;
-  color: #ffffff;
+  color: white;
 }
 .form-wizard .form-wizard-steps li.active::after, .form-wizard .form-wizard-steps li.activated::after {
-  background-color: #0d6efd;
+  background-color: var(--color-4-paleta);
   left: 50%;
   width: 50%;
-  border-color: #0d6efd;
+  border-color: var(--color-4-paleta);
 }
 .form-wizard .form-wizard-steps li.activated::after {
   width: 100%;
-  border-color: #0d6efd;
+  border-color: var(--color-4-paleta);
 }
 .form-wizard .form-wizard-steps li:last-child::after {
   left: 0;
@@ -669,9 +741,31 @@ a {
     margin-bottom: 4%;
 }
 .wizard-section {
-    margin-top: 5%;
-    background-color: #1FEDD6;
+    background-color: var(--color-2-paleta);
+    padding: 50px 0 100px 0;
 }
+
+.btn-form_process {
+    background-color: var(--color-4-paleta);
+    color: white;
+    font-family: Roboto-Regular;
+}
+.btn-form_process:hover {
+    background-color: var(--color-4-paleta);
+    opacity: .9;
+    color: white;
+}
+#textomostrar {
+    text-align: center;
+    font-family: Roboto-Bold;
+    color: #2ec14f;
+}
+.form_process__textomostrar {
+    text-align: center;
+    font-family: Roboto-Bold;
+    color: #2ec14f;
+}
+
 @keyframes click-radio-wave {
   0% {
     width: 25px;
@@ -693,58 +787,66 @@ a {
   }
 }
 
-/*=======FOOTER=======*/
+
+/*========================
+        FOOTER
+========================*/
+
 .footer{
-    background: linear-gradient(to right, var(--color-3-paleta), white);
+    position: relative;
+    background: white;
+    color: #959da5;
 }
 
-.container-footer {
+.footer-container {
     color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 3rem;
+}
+.footer-sub__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .links{
-    display: flex;
-    flex-wrap: wrap;
-    color: black;
-}
-
-.links a{
-    padding: 20px;
+    display: grid;
+    place-items: start;
+    gap: 1rem;
 }
 
 .link{
     transition: transform .2s; 
+    color: #959da5;
+    font-size: 14px;
 }
-
 .link:hover{
-    transform: scale(1.1); 
+    color: #0969da;
+    text-decoration: underline;
+
 }
 
 .redes{
     display: flex;
+    gap: 2rem;
 }
-.bi-facebook, .bi-instagram{
-    color: black;
+.redes a i {
+    font-size: 20px;
 }
 
 .redes a{
-    padding: 10px;
     transition: transform .2s; 
+    color: #959da5;
 }
-
 .redes a:hover{
     transform: scale(1.2);
 }
 
-.copy-2023{
-    color: black;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 20px;
-    text-align: center;
+.copyright{
+    text-align: center;   
 }
-/*=======FOOTER=======*/
+.copyright > span{
+    font-size: 12px;
+}
