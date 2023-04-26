@@ -15,6 +15,38 @@
 
 </head>
 <body>
+    <!-- Modal -->
+    <div>
+        <div class="modal fade" id="exampleModal" tabindex="2" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content text-black">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <label for="recipient-name" class="col-form-label"><img src="./images/icon-usuario.png" alt="icon-usuario" width="30" height="30"></label>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="Usuario">
+                                <label for="floatingInput">Usuario</label>
+                            </div>
+                            <label for="message-text" class="col-form-label"><img src="./images/icon-contraseña.png" alt="icon-contraseña" width="30" height="30"></label>
+                            <div class="form-floating">
+                                <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+                                <label for="floatingPassword">Contraseña</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Cierra Modal-->
 
     <div class="container-master">
         <header class="header">
@@ -47,38 +79,6 @@
                     </div>
                 </div>
             </nav>
-            <!-- Modal -->
-            <div>
-                <div class="modal fade" id="exampleModal" tabindex="-2" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content text-black">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <label for="recipient-name" class="col-form-label"><img src="./images/icon-usuario.png" alt="icon-usuario" width="30" height="30"></label>
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="floatingInput" placeholder="Usuario">
-                                        <label for="floatingInput">Usuario</label>
-                                    </div>
-                                    <label for="message-text" class="col-form-label"><img src="./images/icon-contraseña.png" alt="icon-contraseña" width="30" height="30"></label>
-                                    <div class="form-floating">
-                                        <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
-                                        <label for="floatingPassword">Contraseña</label>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="button" class="btn btn-primary">Enviar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Cierra Modal-->
         </header>
         <main class="main">
             <section class="main-hero">
@@ -94,7 +94,7 @@
                 </div>
                 <svg class="hero-wave" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path  fill-opacity="1" d="M0,160L24,154.7C48,149,96,139,144,160C192,181,240,235,288,234.7C336,235,384,181,432,160C480,139,528,149,576,160C624,171,672,181,720,170.7C768,160,816,128,864,128C912,128,960,160,1008,154.7C1056,149,1104,107,1152,128C1200,149,1248,235,1296,256C1344,277,1392,235,1416,213.3L1440,192L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path></svg>
             </section>
-            <section class="main-presentacion">
+            <section class="main-presentacion" id="organizacion">
                 <div class="presentacion__container col-11 col-md-6">
                     <h2 class="presentacion__title">Conocenos</h2>
                     <h3 class="presentacion__text"><strong>FutbolData</strong> es un equipo de expertos técnicos dedicados a asesorar a equipos de fútbol en la toma de decisiones importantes para mejorar su rendimiento. Utilizamos los últimos equipos y herramientas de análisis de datos para evaluar el desempeño del equipo y proporcionar recomendaciones sólidas que permitan mejorar su juego. Ya sea que necesiten ayuda para seleccionar alineaciones, mejorar la estrategia o identificar áreas de mejora, nuestro equipo está listo para ayudar. Nos enfocamos en trabajar codo a codo con el equipo y su cuerpo técnico para ofrecer soluciones a medida que generen resultados medibles.</h3>
@@ -105,7 +105,7 @@
             </section>
             <section class="main-api">
 
-                <h2 class="api-title">Nuestro equipo de expertos</h2>
+                <h2 class="api-title" id="personal">Nuestro equipo de expertos</h2>
 
                 <div class="api-container">
                     <div class="col-11">
@@ -130,12 +130,12 @@
                     <a href="#" class="nav-link link">Contáctanos</a>
                 </div>
                 <div class="redes">
-                    <a href="#"><img src="images/icon-facebook.png" alt="icon-facebook" width="40" height="40"></a>
-                    <a href="#"><img src="images/icon-instagram.png" alt="icon-instagram" width="40" height="40"></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
                 </div>
             </div>
             <div class="copy-2023">
-                <span>© 2023 Todos Los Derechos Reservados Trabajo Integrador</span>
+                <span>© 2023 Todos Los Derechos Reservados FutbolData</span>
             </div>
         </footer>
     </div>

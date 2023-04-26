@@ -145,7 +145,6 @@
     transform: translateY(0);
 }
 
-
 @media (min-width: 768px) {
     .navbar-lado__izquierdo {
         width: 100%;
@@ -496,7 +495,6 @@
 /*=======FOOTER=======*/
 .footer{
     background: linear-gradient(to right, var(--color-3-paleta), white);
-
 }
 
 .container-footer {
@@ -509,7 +507,8 @@
 
 .links{
     display: flex;
-    color: var(--color-6-paleta);
+    flex-wrap: wrap;
+    color: black;
 }
 
 .links a{
@@ -521,11 +520,14 @@
 }
 
 .link:hover{
-    transform: scale(1.2); 
+    transform: scale(1.1); 
 }
 
 .redes{
     display: flex;
+}
+.bi-facebook, .bi-instagram{
+    color: black;
 }
 
 .redes a{
@@ -541,6 +543,7 @@
     color: black;
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
+    padding-bottom: 20px;
+    text-align: center;
 }
 /*=======FOOTER=======*/
