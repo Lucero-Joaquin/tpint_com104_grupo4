@@ -118,9 +118,144 @@
                 <svg class="api-wave" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill-opacity="1" d="M0,96L720,320L1440,128L1440,320L720,320L0,320Z"></path></svg>
             </section>
             <section class="main-form_contact">
-                <!-- ¡Contáctanos hoy mismo para ver cómo podemos ayudar a tu equipo a llegar a lo más alto! -->
+                <div class="formContacto">
+                    <h1 id="Fcontacto">Formulario de Contacto</h1>
+                    <form class="offset-md-8" action="" method="post" id="formulario">
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup2"><i class="bi bi-person">&nbsp;</i> Nombre y Apellido</span>
+                                </div>
+                                <input type="text" class="form-control" id="Nombre" name="nombre" placeholder="Martin">
+                                <input type="text" class="form-control" id="Apellido" placeholder="Laurito" name="apellido" >
+                            </div>
+                            <div class="d-flex flex-row">
+                                <div class="errorTxt offset-md-4" id="errorName"></div> 
+                                <div class="offset-md-1" id="errorSurname"></div>
+                            </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup3">@ Email</span>
+                                </div>
+                                <input type="email" class="form-control" id="Email" placeholder="queseyo@frba.utn.edu.ar" name="mail" aria-describedby="inputGroupPrepend3" required>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup4"><i class="bi bi-telephone">&nbsp;</i>Telefono</span>
+                                </div>
+                                <input type="text" class="form-control" id="Telefono" name="telefono" placeholder="+54 1111-2222">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label class="w-100" for="Provincia">Provincia</label>
+                                <select class="col-md-12 mb-2 p-2 custom-select mt-1" id="Provincia">
+                                    <option selected>C.A.B.A</option>
+                                    <option value="1">Salta</option>
+                                    <option value="2">La Pampa</option>
+                                    <option value="3">Entre Rios</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-4">
+                                <label for="Comentarios">Comentario</label>
+                                <textarea class="form-control " id="Comentarios" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary mt-3" type="button" id="Enviar">Enviar Consulta</button>
+                    </form>
+                </div>
             </section>
-            <section class="main-form_process"></section>
+                    <div>
+                      <div class="d-flex flex-row justify-content-center">
+                        <h3 class="align-self-end"  id="textomostrar" style="width: fit-content;">Se enviaron los datos correctamente!</h3>
+                        <button class="btn btn-primary mt-3 offset-md-1" type="button" id="Mostrar">Mostrar Formulario</button>
+                      </div>
+            <section class="main-form_process">
+                <section class="wizard-section">
+                    <div class="row no-gutters">
+                      <div class="col-lg-9 col-md-9">
+                        <div class="form-wizard offset-md-4">
+                          <form action="" method="post" role="form">
+                            <div class="form-wizard-header">
+                              <h3 id="sumate">Sumate!</h3>
+                              <ul class="list-unstyled form-wizard-steps clearfix">
+                                <li class="active"><span>1</span></li>
+                                <li><span>2</span></li>
+                                <li><span>3</span></li>
+                              </ul>
+                            </div>
+                            <fieldset class="wizard-fieldset show">
+                              <h5>Información Personal</h5>
+                              <div class="form-group">
+                                <input type="text" class="form-control wizard-required" id="fname">
+                                <label for="fname" class="wizard-form-text-label">Nombre*</label>
+                                <div class="wizard-form-error"></div>
+                              </div>
+                              <div class="form-group">
+                                <input type="text" class="form-control wizard-required" id="lname">
+                                <label for="lname" class="wizard-form-text-label">Apellido*</label>
+                                <div class="wizard-form-error"></div>
+                              </div>
+                              <div class="form-group">
+                                <input type="text" class="form-control wizard-required" id="zcode">
+                                <label for="zcode" class="wizard-form-text-label">Edad*</label>
+                                <div class="wizard-form-error"></div>
+                              </div>
+                              <div class="form-group clearfix">
+                                <a class="form-wizard-next-btn float-right">Proximo</a>
+                              </div>
+                            </fieldset>	
+                            <fieldset class="wizard-fieldset">
+                              <h5>Registre sus datos</h5>
+                              <div class="form-group">
+                                <input type="email" class="form-control wizard-required" id="email">
+                                <label for="email" class="wizard-form-text-label">Email*</label>
+                                <div class="wizard-form-error"></div>
+                              </div>
+                              <div class="form-group">
+                                <input type="text" class="form-control wizard-required" id="username">
+                                <label for="username" class="wizard-form-text-label">Usuario*</label>
+                                <div class="wizard-form-error"></div>
+                              </div>
+                              <div class="form-group">
+                                <input type="password" class="form-control wizard-required" id="pwd">
+                                <label for="pwd" class="wizard-form-text-label">Contraseña*</label>
+                                <div class="wizard-form-error"></div>
+                                <span class="wizard-password-eye"><i class="far fa-eye"></i></span>
+                              </div>
+                              <div class="form-group">
+                                <input type="password" class="form-control wizard-required" id="cpwd">
+                                <label for="cpwd" class="wizard-form-text-label">Contraseña*</label>
+                                <div class="wizard-form-error"></div>
+                              </div>
+                              <div class="form-group clearfix">
+                                <a class="form-wizard-previous-btn float-left">Anterior</a>
+                                <a class="form-wizard-next-btn float-right">Proximo</a>
+                              </div>
+                            </fieldset>	
+                            <fieldset class="wizard-fieldset">
+                              <div class="form-group clearfix">
+                                <a class="form-wizard-previous-btn float-left">Anterior</a>
+                                <a class="form-wizard-submit float-right" id="Ocultar">Enviar</a>
+                                <button type="button" class="btn btn-primary mt-3" id="PDF" style="margin-left: 50%;">Exportar a PDF</button>
+                              </div>
+                            </fieldset>	
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </section>
+            </section>
         </main>
 
         <footer class="footer">
