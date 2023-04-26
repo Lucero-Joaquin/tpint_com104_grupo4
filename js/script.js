@@ -110,10 +110,13 @@ $("#Enviar").on("click", function (event) {
         $("#formulario").hide();
     } 
 });
-
+jQuery.validator.addMethod("formAlfabeto", function(value, element) {
+    return this.optional( element ) || /^((([a-zA-Z\'\.\-]+)?)((,\s*([a-zA-Z]+))?)|([A-Za-z0-9](([\.\-]?[a-zA-Z0-9]+))@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+))\.([A-Za-z]{2,})))(;{1}(((([a-zA-Z\'\.\-]+){1})((,\s*([a-zA-Z]+))?))|([A-Za-z0-9](([\.\-]?[a-zA-Z0-9]+))@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+))\.([A-Za-z]{2,})){1}))*$/.test( value );
+  }, 'Ingrese un nombre válido');
 var rules_name = {
     required: true,
     minlength: 3,
+    formAlfabeto: true
 };
 
 $("#formulario").validate({
